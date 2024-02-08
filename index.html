@@ -6,12 +6,25 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
       margin: 0;
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      background: radial-gradient(circle, #2e3192, #1b1464);
+      background-size: cover;
+      min-height: 100vh;
+      overflow: hidden;
+      animation: gradientAnimation 10s infinite alternate;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background: radial-gradient(circle, #2e3192, #1b1464);
+      }
+      100% {
+        background: radial-gradient(circle, #ff7e5f, #feb47b);
+      }
     }
 
     .flip-card {
@@ -59,6 +72,7 @@
   </style>
 </head>
 <body>
+  <!-- Your existing card structure here -->
 
 <!-- Card 1 -->
 <div class="flip-card" onclick="redirectToCodePage(1)">
@@ -83,7 +97,6 @@
     </div>
   </div>
 </div>
-
 <!-- Repeat the card structure for cards 3-8 -->
 
   <!-- Card  3-->
@@ -109,7 +122,6 @@
     </div>
   </div>
 </div>
-
   <!-- Card 5-->
   <div class="flip-card" onclick="redirectToCodePage(5)">
     <div class="flip-card-inner">
@@ -133,8 +145,7 @@
       </div>
     </div>
   </div>
-
-<!-- Card 7 -->
+  <!-- Card 7 -->
 <div class="flip-card" onclick="redirectToCodePage(7)">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -157,11 +168,11 @@
       </div>
     </div>
   </div>
-  
-<script>
+  <script>
   function redirectToCodePage(cardNumber) {
     window.location.href = "code_page" + cardNumber + ".html";
   }
 </script>
 </body>
 </html>
+  
